@@ -1,2 +1,2 @@
 
-Added details
+Added details delete
