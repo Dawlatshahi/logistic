@@ -1,0 +1,610 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-bottom:  0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 100px;
+}
+
+.logo img {
+  width: 150px;
+  height: 60PX;
+}
+
+.topnav {
+  font-size: 15px;
+  background-color: #f7f4f4;
+  text-decoration-color: #000;
+  margin-right: auto;
+  margin-left: 40px;
+  margin-bottom: 2px;
+ 
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #494848;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5PX;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+    float: left;
+    height: 10px;
+   
+   
+}
+.dropdown .dropbtn {
+  width: fit-content;
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: #494848;
+  padding: 10px 12px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding-bottom: 28px;
+  max-width: fit-content;
+  font-weight: normal;
+  border-radius: 5px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  min-width: 160px;
+  
+  z-index: 9999;
+}
+
+.dropdown-content div {
+background-color: #f9f9f9;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 9998;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 9999;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: rgb(79, 80, 82);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+section {
+  padding-top: 60px;
+  margin: 50px;
+}
+
+
+
+.social-icons {
+  align-items: left;
+  margin-right: 150px !important;
+  border: #000;
+  height: 60px;
+  display: inline-flex;
+  
+
+}
+
+
+
+.social-icons ul {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  padding-top: 32px;
+  padding-right: 20px;
+  margin-right: 95px;
+}
+
+.social-icons ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.social-icons ul li a {
+  width: 33px;
+  height: 33px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #3f3e3e;
+  z-index: 1;
+  padding-top: 5px;
+}
+
+.social-icons ul li a .icon {
+  position: relative;
+  color: #5c5b5b;
+  transition: .5s;
+  z-index: 3;
+  align-items: center;
+}
+
+.social-icons ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social-icons ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.social-icons ul li a:hover:before {
+  top: 0;
+}
+
+.social-icons ul li:nth-child(1) a:before {
+  background: #727274;
+}
+
+ .search-container {
+  float: right;
+}
+
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  height: 35px;
+}
+
+ .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #8a8a8a;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+ .search-container button:hover {
+  background: #474747;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+  .search-container a, .search-container input[type=text],  .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+ .search-container input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+
+
+
+.container input[type=text],.container input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#signupbtn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  
+}
+/* Set a style for all buttons */
+button {
+  background-color: #4b4b4bc9;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+button:hover {
+  background-color: #3f3e3e;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 0;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.logoutmessage {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Added */
+  align-items: center; /* Added */
+  justify-content: center; /* Added */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  float: right;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto; /* Center horizontally */
+  border: 1px solid #888;
+  width: 50%; /* Set width to 50% */
+  max-width: 600px; /* Optional: Set a maximum width */
+  border-radius: 5%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.signup_container{
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  margin-top: 100px;
+}
+.signup_container .title{
+  font-size: 25px;
+  font-weight: 500;
+  
+}
+.signup_container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #acacac, #555455);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input, .user-details #contactoption{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input[type="date"]{
+  border-color: ccc !important;
+  color: #969494;
+  
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #888787;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: left;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 40%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #5c5b5c;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 50%;
+   border-radius: 10px;
+   border: none;
+   color: #eee7e7;
+   font-size: 15px;
+   font-weight: 400;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background-color: #777777;
+   margin-left: auto;
+   margin-right: auto;
+   float: right;
+   
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background:  #4d4d4d;
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+#login-in-signup{
+  width: 10%; 
+  float: right;
+  background-color:gray;
+  text-align: center;
+  color: #eee7e7;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 5%;
+  padding-top: 5px;
+}
+#login-in-signup:hover{
+  background-color: #474747;
+}
+
+
