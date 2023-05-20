@@ -27,6 +27,8 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
     <?php else : ?>
         <div>You are not logged in.</div>
     <?php endif; ?>   
+    <div>
+    </div>
   
 </body>
 </html>
