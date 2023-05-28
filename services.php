@@ -7,7 +7,7 @@
             <img src="images/3.png" >
            <div class="div-p"> 
                 <p >
-                    <h2>We're here to help</h2><br>Find answers, helpful resources, and contact information for all your shipping needs.</p>
+                    <h2>We're here to help You</h2><br>Find answers, helpful resources, and contact information for all your shipping needs.</p>
                 <button style="width:30%;">MORE INFO</button>
             </div>  
         </div>  

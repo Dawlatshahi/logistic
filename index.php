@@ -21,7 +21,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
 ?>
  <div class="main-content">
 
-  
+  Hello All
   </div>
 
 <?php include 'footer.php';?>
