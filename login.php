@@ -20,7 +20,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
 
 
 
-<div  style="width:70%;">
+<div  class="main-content" style="width:70%; margin-top:100px; margin-bottom:100px;">
   <div class="modal-content animate">
   <form  action="loginprocess.php" method="post" enctype="multipart/form-data">
     
@@ -33,7 +33,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
           <div class="error-message"><?php echo $errorMessage; ?></div>
         <?php endif; ?>
         <?php if (isset($logoutmessage)) : ?>
-          <div class="logoutmessage"><?php echo $logoutmessage; ?></div>
+          <div class="success-message"><?php echo $logoutmessage; ?></div>
         <?php endif; ?>
         
      
@@ -64,7 +64,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
         document.addEventListener('DOMContentLoaded', function() {
             // Get the error message element
             var errorMessage = document.querySelector('.error-message');
-            var logoutMessage = document.querySelector('.logoutmessage');
+            var logoutMessage = document.querySelector('.success-message');
 
             // Hide the error message after 5 seconds
             setTimeout(function() {
@@ -78,5 +78,4 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
         });
     </script>
   
-</body>
-</html>
+  <?php include 'footer.php';?>

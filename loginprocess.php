@@ -10,11 +10,12 @@ if(isset($_POST['save']))
     if(is_array($row))
     {
         $_SESSION["ID"] = $row['CustomerID'];
-        $_SESSION["Email"]=$row['Email'];
-        $_SESSION["First_Name"]=$row['FirstName'];
-        $_SESSION["Last_Name"]=$row['LastName']; 
-        header("Location: index.php"); 
+        $_SESSION["Email"] = $row['Email'];
+        $_SESSION["First_Name"] = $row['FirstName'];
+        $_SESSION["Last_Name"] = $row['LastName']; 
+        header("Location: profile.php?user=" . urlencode($_SESSION['First_Name']));
     }
+    
     else
     {
         

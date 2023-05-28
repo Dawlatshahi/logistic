@@ -114,16 +114,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
           
         <div class="input-box">
-          <div class="button">
-            <input type="submit" name="save" value="Register">
-          </div>
+         
+            <button class="button" type="submit" name="save" value="Register">Register</button>
+          
         </div>
      
        
       </form>
       <br>
       
-          <a href="#"onclick="document.getElementById('id01').style.display='block'" id="login-in-signup">Login</a>
+          <a href="#"onclick="document.getElementById('mymodal').style.display='block'" id="login-in-signup">Login</a>
         
     </div>
   </div>
