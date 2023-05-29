@@ -7,29 +7,19 @@
       <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-      <script>
-         function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-               x.className += " responsive";
-            } else {
-               x.className = "topnav";
-            }
-         }
+  <script>
+    function checkSession(event) {
+      event.preventDefault(); // Prevent form submission
 
-         function openModal() {
-            var modal = document.getElementById('mymodal');
-            modal.style.display = "block";
-         }
-
-         // When the user clicks anywhere outside of the modal, close it
-         window.onclick = function(event) {
-            var modal = document.getElementById('mymodal');
-            if (event.target == modal) {
-               modal.style.display = "none";
-            }
-         }
-      </script>
+      // Check if the session contains the First_Name data
+      if (sessionStorage.getItem('First_Name')) {
+        window.location.href = 'track.php'; // Redirect to the track page
+      } else {
+        alert('You need to login first.'); // Show an alert message
+      }
+    }
+  </script>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
    </head>
    <body>
       <header>
@@ -43,13 +33,12 @@
                </button>
                <div class="dropdown-content" style="">
                   <div style="margin-top:20px;">
-                     <a href="#">Create a Shipment</a>
+                     <a href="createshippment.php">Create a Shipment</a>
                      <a href="#">Shipping Rates and Delivery Times</a>
                      <a href="#">Schedule & Manage Pickups</a>
                      <a href="#">Packing & Shipping Supplies</a>
                      <a href="#">International Shipping Guide</a>
-                     <a href="#">Freit</a>
-                     <a href="#">All Shipping Services</a>
+                     <a href="services.php">All Shipping Services</a>
                   </div>
                </div>
             </div>
@@ -58,10 +47,14 @@
                <i class="fa fa-caret-down"></i>
                </button>
                <div class="dropdown-content" style="">
+               
                   <div style="margin-top:20px;">
-                     <a href="#">Manage Your Delivery</a>
-                     <a href="#">Track Your Delivery</a>
-                     <a href="#">Adevance Delivery</a>
+                     <a href="#">    <form class="tracking-form" action="profile.php" method="post">
+                        <input type="text" name="tracking_number" placeholder="Enter tracking number" required>
+                        <input type="submit" value="Track" onclick="checkSession(event)">
+                     </form></a>
+                     <a href="#">Manage Delivery</a>
+                     <a href="#">Adevance Delivery Updates</a>
                   
                   </div>
                </div>
@@ -138,7 +131,29 @@
       </header>
       
       <!-- Rest of the HTML code -->
+      <script>
+     
 
-      <script src="js/script.js"></script>
-   </body>
-</html>
+         function openModal() {
+            var modal = document.getElementById('mymodal');
+            modal.style.display = "block";
+         }
+
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function(event) {
+            var modal = document.getElementById('mymodal');
+            if (event.target == modal) {
+               modal.style.display = "none";
+            }
+         }
+         function checkSession(event) {
+      // Check if the session contains the First_Name data
+      <?php if (isset($_SESSION['First_Name'])) { ?>
+        // Allow form submission and redirect to the track page
+      <?php } else { ?>
+        alert('You need to login first.'); // Show an alert message
+        event.preventDefault(); // Prevent form submission
+      <?php } ?>
+    }
+  </script>
+ 

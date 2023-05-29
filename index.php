@@ -20,8 +20,14 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
 }
 ?>
  <div class="main-content">
-
-  Hello All
+        <?php
+        if (isset($_GET['shipment']) && $_GET['shipment'] == 0) {
+        echo '<div class="message">To create a shipment, you should log in first.</div>';
+        }
+        ?>
+  
   </div>
+
+
 
 <?php include 'footer.php';?>

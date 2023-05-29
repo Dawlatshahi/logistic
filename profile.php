@@ -46,13 +46,16 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
       
     </div>
     <div class="profile">
+    <div class="success-message" style="display:none;" ></div>
     <h1>Profile Account</h1>
-    <div class="success-message" style="dispay:none;" ></div>
+    <div class="" style="width:100%";> thhis is a teghkvjblnksd</div>
+    
     </div>
  
     
   
   </div>
+  
     <script>
         // The function for cuccess message
         document.addEventListener('DOMContentLoaded', function() {

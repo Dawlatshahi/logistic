@@ -1,0 +1,49 @@
+.signup-with-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  .g_id_signin {
+    margin-top: 20px;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .social-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+  }
+
+  .facebook-btn {
+    background-color: #3b5998;
+    color: #fff;
+  }
+
+  .twitter-btn {
+    background-color: #1da1f2;
+    color: #fff;
+  }
+
+  .social-login-btn i {
+    margin-right: 10px;
+  }
